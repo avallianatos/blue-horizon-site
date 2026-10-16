@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blue Horizon Charters | Grand Cayman Private Boat Charters</title>
+  <meta name="description" content="Blue Horizon Charters — private, owner-operated boat charters in Grand Cayman. Stingray City, Starfish Point, Rum Point, snorkeling, sunset cruises, and custom adventures." />
+  <link rel="canonical" href="https://your-domain.example/" />
+  <meta name="theme-color" content="#03045e" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Blue Horizon Charters | Grand Cayman Private Boat Charters" />
+  <meta property="og:description" content="Private, owner-operated boat charters — Stingray City, Starfish Point, Reef Snorkels, sunset cruises and custom adventures on Grand Cayman." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.example/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blue Horizon Charters | Grand Cayman Private Boat Charters" />
+  <meta name="twitter:description" content="Private, owner-operated boat charters — Stingray City, Starfish Point, Reef Snorkels, sunset cruises and custom adventures on Grand Cayman." />
+
+  <!-- Favicon (replace with your file) -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root {
+      --ocean: #0077b6;
+      --turquoise: #00b4d8;
+      --deep: #03045e;
+      --sunset: #ff6b35;
+      --gold: #ffd166;
+      --sand: #f4e9d8;
+      --white: #ffffff;
+      --muted: #6b7280;
+      --focus: 3px solid rgba(255,167,38,0.95);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html,body { height: 100%; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, "Helvetica Neue", Arial; color: #222; background: var(--sand); line-height: 1.6; -webkit-font-smoothing:antialiased; }
+    a { color: inherit; }
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 0.5rem 1rem;
+      background: var(--deep);
+      color: var(--white);
+      z-index: 9999;
+      border-radius: 6px;
+    }
+
+    header { background: linear-gradient(135deg, var(--deep), var(--ocean), var(--sunset)); color: white; text-align: center; padding: 2rem 1rem; }
+    .logo { max-width: 280px; height: auto; margin-bottom: 0.5rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); display:inline-block; }
+    h1 { font-size: 2.4rem; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.4); }
+    .tagline { font-size: 1.05rem; opacity: 0.95; margin-top: 0.25rem; }
+
+    nav { background: var(--deep); padding: 0.6rem 1rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 6px rgba(0,0,0,0.12); }
+    nav .nav-inner { max-width: 1200px; margin: 0 auto; display:flex; justify-content:center; gap:1rem; align-items:center; flex-wrap:wrap; }
+    nav a { color: var(--gold); margin: 0 0.6rem; text-decoration: none; font-weight: 600; padding:0.4rem 0.6rem; border-radius:6px; }
+    nav a:hover, nav a:focus { color: white; outline: none; box-shadow: var(--focus); background: rgba(255,255,255,0.03); }
+    nav a:focus { text-decoration: underline; }
+
+    main { max-width: 1200px; margin: 0 auto; padding: 1.5rem; }
+    section { padding: 2.25rem 1rem; }
+    h2 { color: var(--ocean); font-size: 2rem; margin-bottom: 1rem; text-align: center; }
+
+    .owner-box { background: linear-gradient(120deg, var(--turquoise), var(--ocean)); color: white; padding: 1.5rem; border-radius: 12px; text-align: center; margin: 1.5rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
+
+    .destinations { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(0,0,0,0.14); }
+    .card img { width: 100%; height: 200px; object-fit: cover; display:block; }
+    .card h3 { color: var(--deep); padding: 0.8rem 1rem 0; font-size:1.1rem; }
+    .card p { padding: 0 1rem 1rem; color: #444; font-size:0.95rem; }
+
+    .booking { background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); max-width: 700px; margin: 0 auto; }
+    label { display: block; margin: 1rem 0 0.4rem; font-weight: 600; color: var(--deep); font-size:0.95rem; }
+    select, textarea, input { width: 100%; padding: 0.8rem; border: 2px solid var(--turquoise); border-radius: 8px; font-size: 1rem; background: white; color: #111; }
+    select:focus, textarea:focus, input:focus { outline: none; box-shadow: var(--focus); border-color: var(--sunset); }
+
+    button { background: linear-gradient(90deg, var(--sunset), #ff9f1c); color: white; border: none; padding: 1rem 2rem; font-size: 1.05rem; border-radius: 50px; cursor: pointer; margin-top: 1rem; width: 100%; font-weight: bold; }
+    button:hover, button:focus { opacity: 0.95; box-shadow: 0 6px 18px rgba(0,0,0,0.12); outline: none; }
+
+    .form-status { margin-top: 1rem; font-size: 0.95rem; color: var(--muted); display:none; }
+    .form-status.show { display:block; }
+
+    footer { background: var(--deep); color: white; text-align: center; padding: 1.5rem; margin-top: 2rem; font-size:0.95rem; }
+    footer a { color: var(--gold); text-decoration: none; }
+    footer a:hover, footer a:focus { color: white; text-decoration: underline; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      .nav-inner { gap: 0.4rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#maincontent">Skip to main content</a>
+
+  <header role="banner">
+    <!-- Use the included SVG logo file -->
+    <img
+      class="logo"
+      src="/logo.svg"
+      srcset="/logo.svg 1x"
+      width="280"
+      height="96"
+      alt="Blue Horizon Charters logo — anchor and sunrise"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+    <div style="display:none; font-size:1.8rem; font-weight:bold;">⚓ BLUE HORIZON</div>
+    <h1>BLUE HORIZON CHARTERS</h1>
+    <p class="tagline">Private Boat Charters • Grand Cayman, Cayman Islands B.W.I.</p>
+  </header>
+
+  <nav role="navigation" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a href="#destinations">Destinations</a>
+      <a href="#about">About</a>
+      <a href="#booking">Book Now</a>
+    </div>
+  </nav>
+
+  <main id="maincontent" role="main">
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">Owner-Operated Adventure</h2>
+      <div class="owner-box">
+        <strong>Owner-Operated by Captain Christopher McTaggart</strong><br>
+        Locally owned and run with years of hands-on experience on Grand Cayman’s waters.<br>
+        Licensed private boat charter operations — personalized, eco-friendly trips tailored just for you.
+      </div>
+      <p style="text-align:center; max-width:800px; margin:0 auto;">
+        Experience Grand Cayman the way locals do. Captain Chris and the Blue Horizon team create fully customizable private charters focused on the island’s most beautiful marine destinations. Family-friendly, knowledgeable guides, and unforgettable wildlife encounters await.
+      </p>
+    </section>
+
+    <section id="destinations" aria-labelledby="destinations-heading">
+      <h2 id="destinations-heading">Popular Destinations We Operate</h2>
+      <div class="destinations" role="list">
+        <article class="card" role="listitem" aria-labelledby="card1-title">
+          <img loading="lazy" decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Stingray_City%2C_Grand_Cayman.jpg/800px-Stingray_City%2C_Grand_Cayman.jpg" alt="Visitors interacting with stingrays at Stingray City" />
+          <h3 id="card1-title">Stingray City &amp; Sandbar</h3>
+          <p>Swim and interact with dozens of friendly southern stingrays in waist-deep, crystal-clear water. The island’s #1 must-do experience.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="card2-title">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=800&q=80" alt="Shallow turquoise water and starfish at Starfish Point" />
+          <h3 id="card2-title">Starfish Point</h3>
+          <p>Shallow turquoise flats filled with orange starfish. Perfect for photos and gentle snorkeling.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="card3-title">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Relaxing palms and calm waters at Rum Point" />
+          <h3 id="card3-title">Rum Point</h3>
+          <p>Relaxed white-sand beach, palm trees, and calm North Sound waters. Great for a beach stop or lunch.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="card4-title">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1559825481-12a05cc00344?auto=format&fit=crop&w=800&q=80" alt="Seven Mile Beach coastline" />
+          <h3 id="card4-title">Seven Mile Beach</h3>
+          <p>World-famous powdery white sand and turquoise Caribbean Sea. Cruise along or snorkel nearby reefs.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="card5-title">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=800&q=80" alt="Tropical reef and coral gardens" />
+          <h3 id="card5-title">Coral Gardens &amp; Reefs</h3>
+          <p>Vibrant coral reefs teeming with tropical fish — excellent snorkeling stops.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="card6-title">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Underwater view of a shipwreck / USS Kittiwake wreck" />
+          <h3 id="card6-title">USS Kittiwake Wreck</h3>
+          <p>Famous shallow shipwreck ideal for snorkeling and diving. Explore the artificial reef.</p>
+        </article>
+      </div>
+
+      <p style="text-align:center; margin-top:1.5rem;"><em>Custom itineraries available — Bio Bay night tours, sunset cruises, fishing, and more.</em></p>
+    </section>
+
+    <section id="booking" aria-labelledby="booking-heading">
+      <h2 id="booking-heading">Book Your Charter</h2>
+      <div class="booking" aria-live="polite">
+        <p>Select your preferred destination and tell us any special requests. We’ll reply quickly with availability and details.</p>
+        <form id="bookForm" onsubmit="return sendBooking(event)" novalidate>
+          <label for="destination">Choose Destination</label>
+          <select id="destination" name="destination" required aria-required="true">
+            <option value="">-- Select a destination --</option>
+            <option>Stingray City &amp; Sandbar</option>
+            <option>Starfish Point</option>
+            <option>Rum Point</option>
+            <option>Seven Mile Beach</option>
+            <option>Coral Gardens / Reef Snorkel</option>
+            <option>USS Kittiwake Wreck</option>
+            <option>Bio Bay Night Tour</option>
+            <option>Custom / Private Adventure</option>
+          </select>
+
+          <label for="requests">Personalized Requests / Notes</label>
+          <textarea id="requests" name="requests" rows="5" placeholder="Group size, preferred date/time, ages of kids, special occasions, snorkeling level, etc."></textarea>
+
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required aria-required="true" placeholder="Your name" />
+
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required aria-required="true" placeholder="your@email.com" />
+
+          <button type="submit" id="submitBtn">Send Booking Request</button>
+
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>Blue Horizon Charters • Private Boat Charter Operations • Grand Cayman, Cayman Islands B.W.I.</p>
+    <p>Owner-Operated by Christopher McTaggart • Licensed Trade &amp; Business Licence No. 122356</p>
+    <p>Contact: <a href="mailto:cjsmctaggart1987@gmail.com">cjsmctaggart1987@gmail.com</a> • <a href="tel:+13459681234">+1 (345) 968-1234</a></p>
+  </footer>
+
+  <!-- JSON-LD Structured Data for LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristInformationCenter",
+    "name": "Blue Horizon Charters",
+    "description": "Private, owner-operated boat charters based in Grand Cayman offering Stingray City, Starfish Point, reef snorkels, sunset cruises and custom adventures.",
+    "url": "https://your-domain.example/",
+    "telephone": "+1-345-968-1234",
+    "email": "cjsmctaggart1987@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Grand Cayman",
+      "addressRegion": "Cayman Islands",
+      "addressCountry": "KY"
+    },
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 08:00-18:00"
+  }
+  </script>
+
+  <script>
+    // Booking form: open a mailto with encoded body, and show user feedback message
+    function sendBooking(e) {
+      e.preventDefault();
+      const dest = document.getElementById('destination');
+      const req = document.getElementById('requests');
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const status = document.getElementById('formStatus');
+      // basic validation
+      if (!dest.value) {
+        status.textContent = 'Please select a destination.';
+        status.classList.add('show');
+        dest.focus();
+        return false;
+      }
+      if (!name.value.trim()) {
+        status.textContent = 'Please enter your name.';
+        status.classList.add('show');
+        name.focus();
+        return false;
+      }
+      if (!email.value.trim()) {
+        status.textContent = 'Please enter your email.';
+        status.classList.add('show');
+        email.focus();
+        return false;
+      }
+
+      status.textContent = 'Opening your email client to send the booking—if nothing happens, copy the info and email us directly.';
+      status.classList.add('show');
+
+      const subject = encodeURIComponent("Blue Horizon Charters Booking Request - " + dest.value);
+      const body = encodeURIComponent(
+        "Name: " + name.value.trim() + "\n" +
+        "Email: " + email.value.trim() + "\n" +
+        "Destination: " + dest.value + "\n\n" +
+        "Personalized Requests:\n" + req.value.trim() + "\n\n" +
+        "Sent from Blue Horizon Charters website."
+      );
+
+      // open mailto. Use window.location to allow mobile devices' mail clients to respond.
+      window.location.href = "mailto:cjsmctaggart1987@gmail.com?subject=" + subject + "&body=" + body;
+      // keep message visible for a short time
+      setTimeout(() => {
+        status.textContent = "If your email client did not open, please send your request directly to cjsmctaggart1987@gmail.com.";
+      }, 4000);
+      return false;
+    }
+  </script>
+</body>
+</html>
